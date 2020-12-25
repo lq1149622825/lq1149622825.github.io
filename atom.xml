@@ -6,7 +6,7 @@
   <link href="https://lq1149622825.github.io/atom.xml" rel="self"/>
   
   <link href="https://lq1149622825.github.io/"/>
-  <updated>2020-12-25T05:17:09.278Z</updated>
+  <updated>2020-12-25T07:01:05.387Z</updated>
   <id>https://lq1149622825.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tcp网络知识</title>
+    <link href="https://lq1149622825.github.io/2020/12/25/tcp-wang-luo-zhi-shi/"/>
+    <id>https://lq1149622825.github.io/2020/12/25/tcp-wang-luo-zhi-shi/</id>
+    <published>2020-12-25T06:58:52.000Z</published>
+    <updated>2020-12-25T07:01:05.387Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是TCP?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;TCP为传输层协议，是面向连接的为应用层提供服务，通过端口号唯一标识一个应用。提供端对端的可靠性服务传输层协议。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;什么为面向连接？为什么需要TCP协议？&lt;/strong&gt;&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+    <category term="网络tcpz知识汇总" scheme="https://lq1149622825.github.io/tags/%E7%BD%91%E7%BB%9Ctcpz%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 吕强的个人博客">
+    <meta name="keywords" content="Tcp网络知识, 吕强的个人博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 吕强的个人博客</title>
+    <title>Tcp网络知识 | 吕强的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Tcp网络知识</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9Ctcpz%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/">
+                                <span class="chip bg-color">网络tcpz知识汇总</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -465,15 +469,83 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <p><strong>什么是TCP?</strong></p>
+<p>TCP为传输层协议，是面向连接的为应用层提供服务，通过端口号唯一标识一个应用。提供端对端的可靠性服务传输层协议。</p>
+<p><strong>什么为面向连接？为什么需要TCP协议？</strong></p>
+<p>面向连接中通信中，会在两个端点之间建立了一条可靠的数据通信信道。</p>
+<p>因为IP协议不能保证数据网络包被对方能够接受，不能保证对方得到完整的数据，不能保证数据有序交付…</p>
+<p>那么TCP如何保证数据是可靠传递的？无损坏、无间隔、非冗余、有序的</p>
+<p>我们先来看看TCP的头部：</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727205724263.png" alt="image-20200727205724263"></p>
+<p>源端口是表示本机应用程序使用的端口号 目的端口表示接收方应用程序使用的端口号</p>
+<p>两个端口号的值加上ip地址的源IP地址和目的IP地址可以确定一个TCP连接</p>
+<p><strong>TCP允许一个主机同时运行多个应用进程。每台主机可以拥有多个应用端口，每对端口号、源和目标IP地址的组合唯一地标识了一个会话。</strong></p>
+<p>下面再来解释下端口号是什么？</p>
+<p>所谓的端口，就好像是门牌号一样，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AE%A2%E6%88%B7%E7%AB%AF/101081">客户端</a>可以通过ip地址找到对应的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/3369401">服务器端</a>，但是服务器端是有很多端口的，每个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/5985445">应用程序</a>对应一个端口号，通过类似门牌号的端口号，客户端才能真正的访问到该服务器。为了对端口进行区分，将每个端口进行了编号，这就是端口号。这就解释了ip可以寻找到一台主机、而端口号寻找到一条主机上的一个应用程序。</p>
+<p>端口号的分类</p>
+<p><strong>知名端口</strong>：有些网络服务会使用固定的端口，这类端口称为<strong>知名端口</strong>，端口号范围为0-1023。如FTP、HTTP、Telnet、SNMP服务均使用知名端口。</p>
+<p><strong>动态端口</strong>：<strong>动态端口号</strong>范围从1024到65535，这些端口号一般不固定分配给某个服务，也就是说许多服务都可以使用这些端口。只要运行的程序向系统提出访问网络的申请，那么系统就可以从这些端口号中分配一个供该程序使用。</p>
+<p><strong>32位序列号的作用</strong>：用于标识从<strong>发送端</strong>发出的不同的TCP数据段的序号。<strong>可以解决网络包乱序问题。</strong></p>
+<p>数据段在网络中传输时，它们的顺序可能会发生变化；接收端<strong>依据此序列号</strong>，便可<strong>按照正确的顺序重组数据</strong>。</p>
+<p><strong>32位确认序列号：</strong>用于标识<strong>接收端</strong>确认收到的数据段。确认序列号为<strong>成功收到的数据序列号加1</strong>。<strong>用来解决不丢包的问题</strong>。</p>
+<p><strong>16位窗口大小</strong>：表示接收端期望通过单次确认而收到的数据的大小。由于该字段为16位，所以窗口大小的最大值为65535字节，该机制通常<strong>用来进行流量控制</strong></p>
+<p><strong>窗口值</strong>是【0，2^16-1]之间的整数。<strong>窗口</strong>指的是<strong>发送本报文段的一方的接收窗口（而不是自己的发送窗口）</strong>。</p>
+<p><strong>窗口值告诉对方：</strong>从本报文段首部中的确认号算起，接收方目前允许对方发送的数据量。之所以要有这个限制，是因为接收方的数据缓存空间是有限的。</p>
+<p>总之，窗口值作为接收方让发送方设置其发送窗口的依据。并且窗口值是经常在动态变化着。</p>
+<p><strong>6位标志位：</strong></p>
+<p><strong>URG：</strong>紧急指针是否有效。它告诉系统此报文段中有<strong>紧急数据</strong>，应<strong>尽快传送</strong>（相当于高优先级的数据），而不要按原来的排队顺序来传送。</p>
+<p>例如，已经发送了很长的一个程序在远端的主机上运行。但后来发现了一些问题，需要取消该程序的运行。因此用户从键盘发出中断命令（Control+c）。如果不使用紧急数据，那么这两个字符将存储在接收TCP的缓存末尾。只有在所有的数据被处理完毕后这两个字符才被交付接收方的应用进程。这样做就浪费了许多时间。</p>
+<p>当URG置为1时，发送应用进程就告诉发送方的TCP有紧急数据要传送。于是<strong>发送方TCP就把紧急数据插入到本报文段数据的最前面</strong>，而在紧急数据后面的数据仍时普通数据。这时要与首部中<strong>紧急指针字段</strong>配合使用。</p>
+<p><strong>ACK：</strong>表示确认号是否有效，携带ack标志的报文段也称确认报文段，<strong>仅当ACK=1时确认号字段才有效。</strong>当ACK=0时，确认号无效。TCP规定，在连接建立后所有的传送的报文段都必须把ACK置1。</p>
+<p><strong>PSH：</strong>提示<strong>接收端</strong>应用程序应该立即<strong>从tcp接受缓冲区中读走数据</strong>，为后续接收的数据让出空间。</p>
+<p>当两个应用进程进行交互式的通信时，<strong>有时在一端的应用进程希望在键入一个命令后立即就能收到对方的响应。</strong>在这种情况下，TCP就可以使用推送操作。这时，发送方TCP把PSH置1，并立即创建一个报文段发送出去。<strong>接收方TCP收到PSH=1的报文段，就尽快地交付接收应用进程</strong>，而不再等到整个缓存都填满了后向上交付。虽然应用程序可以选择推送操作，但推送还很少使用。</p>
+<p><strong>RST</strong>：表示要求对方<strong>重建连接</strong>。带RST标志的tcp报文段也叫复位报文段。</p>
+<p>当RST=1时，表明TCP连接中出现严重差错（如由于主机崩溃或其他原因），必须释放连接，然后再重新建立运输连接。RST置1还用来拒绝一个非法的报文段或拒绝打开一个连接。</p>
+<p><strong>SYN：</strong>表示建立一个连接，携带SYN的tcp报文段为<strong>同步报文段</strong>。在连接建立时<strong>用来同步序号</strong>。</p>
+<p>当SYN=1而ACK=0时，表明这是一个<strong>连接请求报文段</strong>。对方若同意建立连接，则应在相应的报文段中使用SYN=1和ACK=1。因此，SYN置为1就表示这是一个连接请求。</p>
+<p><strong>FIN标志：</strong>表示告知对方本端要关闭连接了。用来释放一个连接。</p>
+<p>当FIN=1时，表明此报文段的发送方的数据已发送完毕，并要求释放运输连接。</p>
+<p>TCP是怎样建立连接的？</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727220632699.png" alt="image-20200727220632699"></p>
+<p>1、主机A（通常也称为客户端）发送一个标识了<strong>SYN=1，ACK=0</strong>的数据段，表示期望与服务器A建立连接，TCP规定SYN=1时不能携带数据，但要消耗一个序号,因此声明自己的序号是 <strong>seq=a；</strong></p>
+<p>2、服务器A回复标识了<strong>SYN=1,ACK=1</strong>的数据段，此数据段的序列号<strong>seq=b</strong>，确认序列号为主机A的序列号加1（<strong>ack=a+1</strong>），以此作为对主机A的SYN报文的确认。</p>
+<p>3、主机A发送一个标识了<strong>ACK=1</strong>的数据段，此数据段的序列号<strong>seq=a+1</strong>，确认序列号为服务器A的序列号加1（<strong>ack=b+1</strong>），以此作为对服务器A的SYN报文段的确认。</p>
+<p>TCp如何保证数据的可靠性？</p>
+<p><strong>TCP确认机制：</strong></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727223836055.png" alt="image-20200727223836055"></p>
+<p><strong>TCP的可靠传输</strong>体现在TCP使用了<strong>确认技术</strong>来<strong>确保目的设备收到了从源设备发来的数据</strong>，并且是准确无误的。</p>
+<p><strong>确认技术的工作原理：</strong>目的设备接收到源设备发送的数据段时，会向源端发送确认报文，表明自己收到了哪些数据，源设备收到确认报文后，继续发送数据段，如此重复。</p>
+<p>如图所示，主机A向服务器A发送TCP数据段，为描述方便假定每个数据段的长度都是500个字节。</p>
+<p>主机A发送前3个数据段，当服务器A成功收到序列号是M+1499的字节以及之前的所有字节时，会以序列号M+1499+1=M+1500进行确认。</p>
+<p>但是在发送第N+3个数据段时传输失败，由于数据段N+3传输失败，所以服务器A未能收到序列号为M+1500的字节，因此服务器A还会再次以序列号M+1500进行确认。这时主机A会使用<strong>重传机制</strong>，重新传输N+3后的数据段。</p>
+<p><strong>TCP流量控制：</strong></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727222744343.png" alt="image-20200727222744343"></p>
+<p>TCP滑动窗口技术通过<strong>动态改变窗口大小</strong>来实现对端到端设备之间的数据传输进行<strong>流量控制。</strong></p>
+<p>如图所示，主机A和服务器A之间通过滑动窗口来实现流量控制。为方便理解，此例中只考虑主机A发送数据给服务器A时，<strong>接收端服务器A通过滑动窗口进行的流量控制。</strong></p>
+<p>主机A向服务器发送4个长度为1024字节的数据段，其中主机A的窗口大小为4096个字节。服务器A收到第3个数据段后，缓存区满，第4个数据段被丢弃<strong>。服务器以ACK3073响应，窗口大小调整为3072，表明服务器的缓冲区只能处理3072个字节的数据段</strong>。</p>
+<p>于是主机A改变其发送速率，发送窗口大小为3072的数据段。这样子，主机A下次发送的数据段的窗口大小都是3072。</p>
+<p><strong>TCP四次分手：</strong></p>
+<p>TCP支持全双工模式传输数据，这意味着<strong>同一时刻两个方向都可以进行数据的传输</strong>。在传输数据之前，TCP通过三次握手建立的实际上是两个方向的连接，因此在传输完毕后，两个方向的连接必须都关闭。</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727225837518.png" alt="image-20200727225837518"></p>
+<p>1、主机A想终止连接，于是发送一个标识了<strong>FIN=1</strong>的数据段，序列号为<strong>seq=a</strong>。FIN=1的作用就是用来释放连接的,表明主机A数据已经发送我完毕,要求释放连接.</p>
+<p>2、服务器A回应一个标识了<strong>ACK=1</strong>的数据段，序列号为<strong>seq=b</strong>，确认序号为<strong>ack=a+1</strong>，作为对主机A的FIN报文的确认。</p>
+<p>3、主机A收到服务器A的确认后进入<strong>等待状态</strong>，等待服务器A请求释放连接，服务器A数据发送完成后就向A请求连接释放。</p>
+<p>服务器A想终止连接，于是向主机A发送一个标识了<strong>FIN=1，ACK=1</strong>的数据段，序列号为<strong>seq=b</strong>，确认序列号为<strong>ack=a+1</strong>。表明服务器A数据已经发送我完毕,要求释放连接。</p>
+<p><strong>为什么主机A要等待呢？</strong></p>
+<p>为了这种情况：服务器A向主机A发送 FIN = 1 的释放连接请求，但这个报文丢失了， 主机A没有接到不会发送确认信息，服务器A 超时会重传，这时主机A在 WAIT_TIME 还能够接收到这个请求，这时再回复一个确认就行了。（主机A收到 FIN = 1 的请求后 WAIT_TIME会重新记时）</p>
+<p>另外服务器A存在一个保活状态，即如果主机A突然故障死机了，那服务器A那边的连接资源什么时候能释放呢？ 就是保活时间到了后，服务器A会发送探测信息， 以决定是否释放连接。</p>
+<p><strong>为什么TIME_WAIT状态需要经过2MSL(最大报文段生存时间)才能返回到CLOSE状态？</strong></p>
+<p>答：虽然按道理，四个报文都发送完毕，我们可以直接进入CLOSE状态了，但是我们必须假象网络是不可靠的，有可以最后一个ACK丢失。所以TIME_WAIT状态就是用来重发可能丢失的ACK报文。</p>
+<p><strong>注意：中断连接端可以是Client端，也可以是Server端。</strong></p>
+<p><strong>为什么连接的时候是三次握手，关闭的时候却是四次握手？</strong></p>
+<p>答：因为当Server端收到Client端的SYN连接请求报文后，可以直接发送SYN+ACK报文。其中ACK报文是用来应答的，SYN报文是用来同步的。但是关闭连接时，当Server端收到FIN报文时，很可能并不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉Client端，”你发的FIN报文我收到了”。只有等到我Server端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。故需要四步握手。</p>
+<p><strong>来个通俗版的解释：</strong></p>
+<p>假设Client端发起中断连接请求，也就是发送FIN报文。Server端接到FIN报文后，意思是说”我Client端没有数据要发给你了”，但是如果你还有数据没有发送完成，则不必急着关闭Socket，可以继续发送数据。所以你先发送ACK，”告诉Client端，你的请求我收到了，但是我还没准备好，请继续你等我的消息”。</p>
+<p>这个时候Client端就进入FIN_WAIT状态，继续等待Server端的FIN报文。当Server端确定数据已发送完成，则向Client端发送FIN报文，”告诉Client端，好了，我这边数据发完了，准备好关闭连接了”。</p>
+<p>Client端收到FIN报文后，”就知道可以关闭连接了，但是他还是不相信网络，怕Server端不知道要关闭，所以发送ACK后进入TIME_WAIT状态，如果Server端没有收到ACK则可以重传。“，Server端收到ACK后，”就知道可以断开连接了”。Client端等待了2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，我Client端也可以关闭连接了。Ok，TCP连接就这样关闭了！（是服务端先关闭，后客户端关闭）</p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727231328120.png" alt="image-20200727231328120"></p>
+<p><img src="C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200727231340529.png" alt="image-20200727231340529"></p>
+<p><strong>TCP</strong> 是<strong>面向连接的,提供端到端可靠性服务</strong>的传输层协议。TCP连接的建立是一个<strong>三次握手</strong>的过程，而TCP连接的终止则要经过<strong>四次握手</strong>。TCP通过<strong>确认机制</strong>保证数据的可靠性的传输，通过<strong>滑动窗口机制</strong>进行流量控制解决拥塞问题</p>
 
                 
             </div>
@@ -490,7 +562,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">lvqiang</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -500,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lq1149622825.github.io/2020/12/25/hello-world/">https://lq1149622825.github.io/2020/12/25/hello-world/</a>
+                    <a href="https://lq1149622825.github.io/2020/12/25/tcp-wang-luo-zhi-shi/">https://lq1149622825.github.io/2020/12/25/tcp-wang-luo-zhi-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -513,7 +585,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">lvqiang</a>
                     !
                 </span>
             </div>
@@ -537,7 +609,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9Ctcpz%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/">
+                                    <span class="chip bg-color">网络tcpz知识汇总</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -705,9 +781,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/25/tcp-wang-luo-zhi-shi/">
                     <div class="card-image">
@@ -725,9 +802,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -736,6 +813,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -751,7 +829,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/12/25/hello-world/">
@@ -781,7 +859,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
